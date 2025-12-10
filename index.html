@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Альфа-календарь</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="alfa-app">
+
+    <!-- Верхний красный бейдж МГУ • Альфа -->
+    <div class="top-banner">
+        <img src="svg\logo-1.svg" alt="МГУ • Альфа">
+    </div>
+
+    <!-- Шапка с профилем -->
+    <header class="app-header">
+        <div class="app-header__left">
+            <div class="app-header__avatar">
+                <img src="svg\avatar small.svg" alt="Профиль">
+            </div>
+            <div class="app-header__name">Александр</div>
+            <div class="app-header__chevron">
+                <img src="svg/HateIT.svg" alt="">
+            </div>
+        </div>
+        <button class="app-header__right-icon" type="button">
+            <img src="svg\Frame 27.svg" alt="Карта/пропуск">
+        </button>
+    </header>
+
+    <main class="app-main">
+
+        <!-- Карточка: счёт Альфа-карты -->
+        <section class="card card--account">
+            <div class="card__content">
+                <div class="card__left">
+                    <div class="card__title">Счёт Альфа-карты</div>
+                    <div class="card__value">69 500<span style="font-weight: 400;">,00 ₽</span></div>
+                </div>
+                <div class="card__right">
+                    <div class="card__mini-card">
+                        <img src="svg\card.svg" alt="Карта А">
+                    </div>
+                </div>
+            </div>
+            <div class="card__footer card__footer--grey">
+                <span class="card__footer-text">Получайте кэшбэк за оплату с Alfa Pay</span>
+                <img class="card__footer-arrow" src="svg\chevron-right.svg" alt="">
+            </div>
+        </section>
+
+        <!-- Карточка: кредит -->
+        <button class="card card--credit" style="border: 0px; width: 100%; padding: 0px;" id="001">
+            <div class="card__content" style="padding-top: 12px;">
+                <div class="card__left">
+                    <div class="card__title" style="text-align: start;">Кредит</div>
+                    <div class="card__value">1 552 500<span style="font-weight: 400;">,00 ₽</span></div>
+                </div>
+            </div>
+            <div class="card__footer card__footer--grey" style="width: 100%;">
+                <span class="card__footer-text">Платёж 30 декабря <span style="font-weight: 600;">139 000</span>,00 ₽</span>
+            </div>
+        </button>
+
+        <!-- Пуш-карточка с красным персонажем -->
+        <section class="card card--push">
+            <span class="card-push" style="border: 0px">
+                <div class="card-push__icon">
+                    <img src="src\пушик 1.png" alt="Персонаж">
+                </div>
+                <div class="card-push__text-block">
+                    <div class="card-push__title">
+                        Пуш говорит: завтра 2 платежа!
+                    </div>
+                    <div class="card-push__subtitle">
+                        Открой календарь и проверь
+                    </div>
+                </div>
+                <button class="card-push__close" type="button">
+                    <img src="svg\Nope.svg" alt="Закрыть">
+                </button>
+            </span>
+            <div class="oaoa">
+                <img src="svg\line-under.svg">
+            </div>
+            <div class="card-push__handle">
+                <img src="svg\down.svg" alt="Потяни вниз">
+            </div>
+        </section>
+    </main>
+    <section class="white">
+        <!-- Поиск + иконка сканера/QR -->
+        <section class="search-section">
+            <div class="search-bar">
+                <div class="search-bar__icon">
+                    <img src="svg\search.svg" alt="">
+                </div>
+                <input class="search-bar__input" type="text" placeholder="Поиск по приложению">
+            </div>
+            <button class="search-section__scanner" type="button">
+                <img src="svg\qr.svg" alt="Сканер">
+            </button>
+        </section>
+
+        <!-- Большая карточка Календарь -->
+        <section class="calendar-card">
+            <div class="calendar-card__left">
+                <button class="calendar-card__icon" style="border: 0px; background-color: #fff;">
+                    <img src="svg/RunGolenRun.svg" alt="Календарь">
+                </button>
+            </div>
+        </section>
+
+        <!-- Горизонтальный список промо-карточек под календарём -->
+        <section class="promo-slider">
+            <article class="promo-card">
+                <div class="promo-card__image">
+                    <img src="svg\END1-1.svg" alt="Новый полис — билет на море">
+                </div>
+                <div class="promo-card__title">
+                    Новый полис —<br>билет на море
+                </div>
+            </article>
+
+            <article class="promo-card">
+                <div class="promo-card__image">
+                    <img src="svg\END3-1.svg" alt="До 16% годовых по вкладу">
+                </div>
+                <div class="promo-card__title">
+                    До 16% годовых<br>по вкладу
+                </div>
+            </article>
+
+            <article class="promo-card">
+                <div class="promo-card__image">
+                    <img src="svg\END3-2.svg" alt="Кредиты и рассрочка">
+                </div>
+                <div class="promo-card__title">
+                    Как не платить <br>проценты<br>по кредитке
+                </div>
+            </article>
+        </section>
+
+        <!-- Круглые контакты -->
+        <section class="contacts-row">
+            <article class="contact-pill">
+                <div class="contact-pill__circle contact-pill__circle--yal">
+                    <img src="svg\SGnormal.svg">
+                </div>
+                <div class="contact-pill__name">
+                    Саша<br>Глухов
+                </div>
+            </article>
+
+            <article class="contact-pill">
+                <div class="contact-pill__circle contact-pill__circle--ia">
+                    <img src="svg\MashaShabal.svg">
+                </div>
+                <div class="contact-pill__name">
+                    Маша<br>Шабалина
+                </div>
+            </article>
+
+            <article class="contact-pill">
+                <div class="contact-pill__circle contact-pill__circle--kk">
+                    <img src="svg\VikaHach.svg">
+                </div>
+                <div class="contact-pill__name">
+                    Вика<br>Хачинян
+                </div>
+            </article>
+
+            <article class="contact-pill">
+                <div class="contact-pill__circle contact-pill__circle--pm">
+                    <img src="svg\MashaStep.svg">
+                </div>
+                <div class="contact-pill__name">
+                    Маша<br>Степанова
+                </div>
+            </article>
+            <article class="contact-pill">
+                <div class="contact-pill__circle contact-pill__circle--pm">
+                    <img src="svg\LastNastya.svg">
+                </div>
+                <div class="contact-pill__name">
+                    Анастасия<br>Запрудная
+                </div>
+            </article>
+        </section>
+
+        <!-- Строка: Переводы по номеру -->
+        <section class="list-row list-row--with-arrow">
+            <div class="list-row__title">Переводы по номеру</div>
+            <div class="list-row__arrow">
+                <img src="svg\right.svg" alt="">
+            </div>
+        </section>
+
+        <!-- Блок: Кэшбэк от партнёров -->
+        <section class="partners-section">
+            <div class="section-header section-header--with-arrow">
+                <div class="section-header__title">Кэшбэк от партнёров</div>
+                <div class="section-header__arrow">
+                    <img src="svg\right.svg" alt="">
+                </div>
+            </div>
+
+            <div class="partners-row">
+                <article class="partner-card">
+                    <div class="partner-card__logo">
+                        <img src="svg\perekrestok.svg" alt="Перекрёсток">
+                    </div>
+                    <div class="partner-card__text">
+                        Перекрёсток <p style="color: #808080; margin-top: 0px; margin-bottom: 0px;">до 10%</p>
+                    </div>
+                </article>
+
+                <article class="partner-card">
+                    <div class="partner-card__logo">
+                        <img src="svg\iPort.svg" alt="iPort">
+                    </div>
+                    <div class="partner-card__text">
+                        iPort <p style="color: #808080; margin-top: 0px; margin-bottom: 0px;">до 15%</p>
+                    </div>
+                </article>
+
+                <article class="partner-card">
+                    <div class="partner-card__logo">
+                        <img src="svg\muis diamonds.svg" alt="MIUZ Diamonds">
+                    </div>
+                    <div class="partner-card__text">
+                        MIUZ Diam…<p style="color: #808080; margin-top: 0px; margin-bottom: 0px;">до 5%</p>
+                    </div>
+                </article>
+
+                <article class="partner-card">
+                    <div class="partner-card__logo">
+                        <img src="svg\chitai gorod.svg" alt="Читай-Город">
+                    </div>
+                    <div class="partner-card__text">
+                        Читай-Гор…<p style="color: #808080; margin-top: 0px; margin-bottom: 0px;">5%</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Блок: Альфа-Выгодно -->
+        <section class="benefits-section">
+            <div class="section-header">
+                <div class="section-header__title">Альфа-Выгодно</div>
+            </div>
+
+            <div class="benefits-row">
+                <article class="benefit-card benefit-card--left">
+                    <div class="benefit-card__image">
+                        <img src="svg\service-1-4.png" alt="Кэшбэк и сервисы">
+                    </div>
+                </article>
+
+                <article class="benefit-card benefit-card--center">
+                    <div class="benefit-card__image">
+                        <img src="svg\service-2-4.png" alt="Суперкэшбэк до 100%">
+                    </div>
+                </article>
+
+                <article class="benefit-card benefit-card--right">
+                    <div class="benefit-card__image">
+                        <img src="svg\service-3-4.png" alt="Другие выгоды">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Строка: Шаблоны и автоплатежи -->
+        <section class="list-row list-row--with-arrow">
+            <div class="list-row__title">Шаблоны и автоплатежи</div>
+            <div class="list-row__arrow">
+                <img src="svg/right.svg" alt="">
+            </div>
+        </section>
+
+        <!-- Кнопка: Открыть новый продукт -->
+        <section class="new-product-section">
+            <button class="new-product-button" type="button">
+                Открыть новый продукт
+            </button>
+        </section>
+
+        <!-- Настроить главный экран -->
+        <section class="customize-section">
+            <button class="customize-button" type="button">
+                <span class="customize-button__icon">
+                    <img src="svg\setting.svg" alt="Настройки">
+                </span>
+                <span class="customize-button__text">
+                    Настроить главный экран
+                </span>
+            </button>
+        </section>
+
+    </section>
+
+    <!-- Нижняя навигация -->
+    <nav class="bottom-nav">
+        <button class="bottom-nav__item bottom-nav__item--active" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\homeMAIN.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Главный</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\platezi.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Платежи</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\vigoda.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Выгода</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\istoriya.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">История</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\chat.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Чаты</span>
+        </button>
+    </nav>
+</section>
+</div>
+</body>
+
+<script>
+    document.getElementsByClassName('app-header__right-icon')[0].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+    
+    document.getElementsByClassName('calendar-card__icon')[0].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+
+    document.getElementsByClassName('card-push')[0].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+    document.getElementsByClassName('bottom-nav__item')[3].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+    document.getElementById('001').addEventListener('click', function() {
+        window.location.href = 'page4.html';
+    })
+</script>
+</html>
+

@@ -1,0 +1,1492 @@
+/* === БАЗОВЫЕ НАСТРОЙКИ === */
+
+@font-face {
+    font-family: Roboto;
+    src: local('Roboto.ttf');
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: Roboto;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    background-color: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    color: #111827;
+}
+
+/* Оболочка приложения под мобильный экран 375px */
+.alfa-app {
+    width: 100%;
+    max-width: 375px;
+    min-height: 100vh;
+    background-color: #F2F3F5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Для больших экранов – центрируем телефон */
+@media (min-width: 400px) {
+    body {
+        background-color: #F2F3F5;
+        padding: 20px 0;
+    }
+    .alfa-app {
+        border-radius: 24px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* === ВЕРХНИЙ БЕЙДЖ === */
+
+.top-banner {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.top-banner img {
+    height: 18px;
+    width: auto;
+}
+
+/* === ХЕДЕР С ПРОФИЛЕМ === */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 6px;
+    margin-bottom: 20px;
+}
+
+.app-header__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-header__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #e5e7eb;
+}
+
+.app-header__name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.app-header__chevron img {
+    width: auto;
+    height: auto;
+}
+
+.app-header__right-icon {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === MAIN === */
+
+.app-main {
+    flex: 1;
+    padding: 0 16px 10px; /* отступ снизу под навигацию */
+    overflow-y: auto;
+}
+
+/* === ОБЩИЕ СТИЛИ КАРТОЧЕК === */
+
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding-top: 12px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 17px;
+}
+
+.card__title {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.card__value {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.card__right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card__mini-card {
+    width: 40px;
+    height: 26px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #ef4444;
+    margin-right: 17px;
+    background-color: #D2D3D9;
+}
+
+.card__miles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 11px;
+    line-height: 1.1;
+}
+
+.card__miles-value {
+    font-weight: 600;
+}
+
+.card__footer {
+    margin-top: 8px;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.card__footer--grey {
+    background-color: #D2D3D9;
+    color: #4b5563;
+    font-size: 12px;
+}
+
+.card__footer-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+/* Карточка кредита чуть плотнее по вертикали */
+.card--credit {
+    margin-top: 4px;
+}
+
+/* === ПУШ-КАРТОЧКА === */
+
+.card--push {
+    padding: 0;
+    margin-top: 8px;
+    box-shadow: none;
+    background: transparent;
+}
+
+.card-push {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 10px 12px;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-push__icon {
+    width: 60px;
+    height: 42px;
+    margin-right: 8px;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+.card-push__text-block {
+    flex: 1;
+}
+
+.card-push__title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.card-push__subtitle {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.card-push__close {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-push__handle {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+.card-push__handle
+.card-push__handle img {
+    width: 22px;
+    height: 6px;
+    opacity: 0.6;
+}
+
+.oaoa {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.white {
+    background-color: #ffffff;
+    padding-left: 16px;
+    border-radius: 32px;
+}
+/* === ПОИСК + QR === */
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 6px;
+}
+
+.search-bar {
+    flex: 1;
+    background-color: #e5e7eb;
+    border-radius: 16px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+
+.search-bar__icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-bar__input {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+}
+
+.search-section__scanner {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+}
+
+/* === КАРТОЧКА КАЛЕНДАРЬ === */
+
+.calendar-card {
+    margin-top: 4px;
+    border-radius: 18px;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-card__left {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.calendar-card__icon img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4px;
+}
+
+.calendar-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.calendar-card__subtitle {
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.3;
+}
+
+.calendar-card__mascot {
+    width: 64px;
+    height: 64px;
+}
+
+/* === ПРОМО-СЛАЙДЕР === */
+
+.promo-slider {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.promo-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.promo-card {
+    min-width: 160px;
+    max-width: 160px;
+    height: 192px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    background-color: #E8F6FD;
+    overflow: hidden;
+}
+
+.promo-card__image {
+    border-radius: 12px;
+    margin-bottom: 6px;
+    height: 50;
+    width: 50;
+}
+
+.promo-card__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.promo-card__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #111827;
+    line-height: 1.3;
+    margin-left: 16px;
+    margin-top: 10px;
+    padding-bottom: 35px;
+    
+}
+
+/* === КОНТАКТЫ В КРУГАХ === */
+
+.contacts-row {
+    margin-top: 12px;
+    display: flex;
+    gap: -5px;
+    overflow-x: auto;
+}
+
+.contacts-row::-webkit-scrollbar {
+    display: none;
+}
+
+.contact-pill {
+    min-width: 80px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.contact-pill__circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+/* Цвета для разных инициалов – просто заглушки */
+
+.contact-pill__name {
+    text-align: center;
+    color: #000;
+}
+
+/* === СТРОКИ СПИСКА С СТРЕЛКОЙ === */
+
+.list-row {
+    margin-top: 14px;
+    padding: 10px 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-row__title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.list-row__arrow img {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+/* === КЭШБЭК ОТ ПАРТНЁРОВ === */
+
+.partners-section {
+    margin-top: 6px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 2px;
+}
+
+.section-header__title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.section-header__arrow img {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.partners-row {
+    margin-top: 4px;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+
+.partners-row::-webkit-scrollbar {
+    display: none;
+}
+
+.partner-card {
+    min-width: 80px;
+    max-width: 80px;
+    border-radius: 12px;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    line-height: 1.2;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.partner-card__logo {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 6px;
+}
+
+/* === АЛЬФА-ВЫГОДНО === */
+
+.benefits-section {
+    margin-top: 10px;
+}
+
+.benefits-row {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.benefits-row::-webkit-scrollbar {
+    display: none;
+}
+
+.benefit-card {
+    min-width: 140px;
+    max-width: 140px;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.benefit-card__image {
+    height: 100;
+    width: 100;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.benefit-card__title {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.benefit-card__subtitle {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* === КНОПКА ОТКРЫТЬ НОВЫЙ ПРОДУКТ === */
+
+.new-product-section {
+    margin-top: 16px;
+}
+
+.new-product-button {
+    width: 343px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F2F3F5;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* === НАСТРОИТЬ ГЛАВНЫЙ ЭКРАН === */
+
+.customize-section {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.customize-button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.customize-button__icon img {
+    width: 14px;
+    height: 14px;
+}
+
+/* === НИЖНЯЯ НАВИГАЦИЯ === */
+
+.bottom-nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    max-width: 375px;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (min-width: 400px) {
+    .bottom-nav {
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+}
+
+.bottom-nav__item {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 9px;
+    color: #6b7280;
+}
+
+.bottom-nav__icon img {
+    width: 40px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+
+.bottom-nav__item--active {
+    color: #000;
+}
+
+/* Сброс стилей кнопок в целом */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* === КАЛЕНДАРЬ (page2) === */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 8px;
+    margin-bottom: 4px;
+}
+
+.calendar-header__back,
+.calendar-header__info {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-header__back img,
+.calendar-header__info img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.calendar-header__title-block {
+    text-align: center;
+    flex: 1;
+}
+
+.calendar-header__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.calendar-header__year {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.calendar-main {
+    flex: 1;
+    padding: 0 0px 30px; /* место под нижнее меню */
+    overflow-y: auto;
+}
+
+/* месяц + настройки */
+
+.calendar-month-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.calendar-month {
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.calendar-month__arrow img {
+    width: 8px;
+    height: 8px;
+}
+
+.calendar-month__settings {
+    border: none;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.calendar-month__settings img {
+    width: 28px;
+    height: 28px;
+}
+
+/* недели и сетка дней */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.calendar-weekday {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    grid-template-rows: repeat(5, 60px);
+}
+
+.calendar-day,
+.calendar-day--empty {
+    min-height: 40px;
+}
+
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.calendar-day__number {
+    margin-bottom: 4px;
+}
+
+.calendar-day--today .calendar-day__number {
+    color: #ff3b30;
+    font-weight: 600;
+}
+
+.calendar-day__tags {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+
+/* чипы под датами */
+
+.calendar-day__tag {
+    width: 45px;
+    height: 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.calendar-day__tag--blue  { background-color: #ffffff; }
+.calendar-day__tag--green { background-color: #ffffff; }
+.calendar-day__tag--yellow{ background-color: #ffffff; }
+.calendar-day__tag--red   { background-color: #ffffff; }
+
+.calendar-day__tag img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.calendar-day__smile {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+}
+
+.calendar-day__smile img {
+    width: 100%;
+    height: 100%;
+}
+
+/* === ОСОБЫЙ ДЕНЬ СО СМАЙЛИКОМ И НАДПИСЬЮ "Альфа–" === */
+
+.calendar-day--emoji {
+    padding-top: 0; /* убираем стандартный отступ сверху для этой клетки */
+}
+
+/* сам смайлик – поднимаем чуть выше, чтобы центр совпадал с цифрами */
+.calendar-day--emoji .calendar-day__emoji {
+    margin-top: -3px; /* если нужно – поиграй: -6, -7, -9 */
+}
+
+/* картинка смайла внутри */
+.calendar-day--emoji .calendar-day__emoji img {
+    width: 27px;
+    height: 34px;
+    display: block;
+}
+
+/* красная таблетка 45x14 с текстом "Альфа–" */
+.calendar-day__alpha-pill {
+    margin-top: 4px;           /* расстояние от смайла до текста */
+    width: 45px;
+    height: 14px;
+    border-radius: 999px;
+    background-color: #F1A6A1; /* как ты просил */
+    color: #FF3B30;            /* красный текст */
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+}
+
+/* === БЛИЖАЙШИЕ СОБЫТИЯ === */
+
+.events-block {
+    margin-top: 24px;
+}
+
+.events-block__title {
+    width: 343px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700; /* вместо 760 */
+    line-height: 24px;
+    margin: 0 0 12px;
+    padding-top: 20px;
+}
+
+/* список событий: расстояние 10px между 1-й и 2-й строкой */
+.events-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px; /* твои 10px */
+    margin-top: 20px;
+}
+
+.events-item__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-item__icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.events-item__icon--blue {
+    background-color: #4B8DFF;
+}
+
+.events-item__icon--red {
+    background-color: #FF4B4B;
+}
+
+.events-item__content {
+    width: 279px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.events-item__row {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.events-item__row--sub {
+    justify-content: space-between;
+    font-size: 14px;
+    color: #707070;
+    line-height: 20px;
+}
+
+.events-item__name {
+    flex: 1 1 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.events-item__amount {
+    display: flex;
+    align-items: flex-start;
+}
+
+.events-item__amount-main,
+.events-item__amount-decimal,
+.events-item__amount-currency {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* нижняя строка: "Не хватает..." и дата */
+
+.events-item__subtitle {
+    flex: 1 1 0;
+}
+
+.events-item__date {
+    width: 98px;
+    text-align: right;
+}
+
+/* кнопка "Добавить новое событие" */
+
+.events-add {
+    width: 343px;
+    height: 50px;
+    margin-top: 10px; /* сразу после второй строки */
+    padding: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #F2F3F5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.events-add__text {
+    width: 170px;
+    text-align: left;
+}
+
+.events-add__icon img {
+    width: 16px;
+    height: 16px;
+}
+
+/* === ДРУГИЕ СОБЫТИЯ === */
+
+.other-block {
+    margin-top: 24px;
+}
+
+.other-block__title {
+    width: 343px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+/* баннер */
+
+.other-banner {
+    width: 343px;
+    height: 160px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.other-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* строки "Автокредит", "Кредит под залог" и т.д. */
+
+.other-item {
+    width: 343px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px; /* расстояние между строками */
+}
+
+.other-item__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-item__icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* цвета кружков слева */
+.other-item__icon--blue  { background-color: #4B8DFF; }
+.other-item__icon--green { background-color: #A0D96B; }
+.other-item__icon--red   { background-color: #FF4B4B; }
+
+.other-item__content {
+    width: 279px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.other-item__row {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.other-item__row--sub {
+    font-size: 14px;
+    color: #707070;
+    line-height: 20px;
+    justify-content: flex-start;
+}
+
+.other-item__row--sub .other-item__subtitle {
+    flex: 1 1 0;
+}
+
+.other-item__row--sub .other-item__period {
+    flex: 1 1 0;
+    text-align: right;
+}
+
+.other-item__row--last {
+    justify-content: space-between;
+}
+
+.other-item__name {
+    flex: 1 1 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.other-item__amount {
+    display: flex;
+    align-items: flex-start;
+}
+
+.other-item__amount-main,
+.other-item__amount-decimal,
+.other-item__amount-currency {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* белый блок под календарём на странице истории/календаря */
+.calendar-bottom {
+    margin-top: 8px;                 /* расстояние от стрелочки до блока */
+    padding: 16px 16px 80px;         /* 16 слева/справа, внизу запас под нижнее меню */
+    background-color: #ffffff;
+    border-radius: 32px 32px 0 0;    /* скруглённые ТОЛЬКО верхние углы */
+}
+
+/* === АВТОКРЕДИТ (NEW PAGE) === */
+
+/* основной скролл для страницы кредита */
+.app-main--credit {
+    flex: 1;
+    padding: 0 16px 80px; /* запас под нижнюю навигацию */
+    overflow-y: auto;
+}
+
+/* верхняя строка: стрелка назад + заголовок + карандаш */
+.credit-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.credit-topbar__back,
+.credit-topbar__edit {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-topbar__back img,
+.credit-topbar__edit img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.credit-topbar__title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* блок с суммой и быстрыми действиями */
+
+.credit-summary {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 12px 12px 16px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.credit-summary__label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.credit-summary__amount {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.credit-summary__currency {
+    font-weight: 400;
+}
+
+.credit-summary__divider {
+    height: 1px;
+    margin: 0 4px 8px;
+    border-bottom: 1px dashed #d1d5db;
+}
+
+.credit-summary__payments {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+/* две круглые кнопки "График платежей" / "Погасить досрочно" */
+
+.credit-summary__quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.credit-quick-action {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.credit-quick-action__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-quick-action__icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.credit-quick-action__text {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #111827;
+    text-align: center;
+}
+
+/* карточка ближайшего платежа */
+
+.credit-payment-card {
+    background-color: #F3F5F7;
+    border-radius: 24px;
+    padding: 14px 16px 16px;
+    margin-bottom: 16px;
+    width: 343px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.credit-payment-card__header {
+    margin-bottom: 10px;
+}
+
+.credit-payment-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.credit-payment-card__subtitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* основная сумма */
+
+.credit-payment-card__main {
+    margin-bottom: 12px;
+}
+
+.credit-payment-card__amount {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.credit-payment-card__account {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* строка "Списываем автоматически" + 44 500 ₽ + иконка i */
+
+.credit-payment-card__split {
+    margin-bottom: 16px;
+}
+
+.credit-payment-card__split-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.credit-payment-card__split-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credit-payment-card__split-amount {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.credit-payment-card__info {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-payment-card__info img {
+    width: 100%;
+    height: 100%;
+}
+
+/* большая чёрная кнопка */
+
+.credit-payment-card__cta {
+    margin-top: 4px;
+}
+
+.credit-payment-card__button {
+    width: 100%;
+    height: 52px;
+    border-radius: 18px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* табы "Действия / История / О кредите" */
+
+.credit-tabs {
+    margin-top: 8px;
+}
+
+.credit-tabs__nav {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #F3F4F6;
+    padding: 4px;
+    margin-bottom: 12px;
+}
+
+.credit-tabs__nav-item {
+    flex: 1;
+    border: none;
+    background: transparent;
+    border-radius: 12px;
+    padding: 8px 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.credit-tabs__nav-item--active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* контент таба "Действия" */
+
+.credit-tabs__content {
+    background-color: transparent;
+}
+
+/* список действий */
+
+.credit-actions {
+    background-color: transparent;
+    margin-bottom: 16px;
+}
+
+.credit-actions__item {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.credit-actions__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-actions__icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.credit-actions__text {
+    font-size: 14px;
+    color: #111827;
+}
+
+/* блок документов */
+
+.credit-documents {
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+
+.credit-documents__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.credit-documents__item {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.credit-documents__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-documents__icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.credit-documents__text {
+    font-size: 14px;
+    color: #111827;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Автокредит — Альфа-календарь</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="alfa-app" style="background-color: #fff;">
+
+    <!-- Верхний красный бейдж МГУ • Альфа -->
+    <div class="top-banner">
+        <img src="svg\logo-1.svg" alt="МГУ • Альфа" style="margin-bottom: 30px;">
+    </div>
+
+    <main class="app-main app-main--credit" style="padding: 0px;">
+
+        <!-- Локальный верх экрана автокредита -->
+        <section class="credit-topbar">
+            <button class="credit-topbar__back" type="button" id="004">
+                <img src="svg\NEZADsuki.svg" alt="Назад" style="width: 15px; height: 15px; margin-left: 16px;">
+            </button>
+            <div class="credit-topbar__title">Автокредит</div>
+            <button class="credit-topbar__edit" type="button">
+                <img src="svg\pensilHYI.svg" alt="Редактировать" style="width: 15px; height: 15px; margin-right: 16px;">
+            </button>
+        </section>
+
+        <!-- Сводка по кредиту -->
+        <section class="credit-summary">
+            <div class="credit-summary__label">Осталось выплатить</div>
+            <div class="credit-summary__amount">
+                3 070 000<span class="credit-summary__currency"> ₽</span>
+            </div>
+
+            <div class="credit-summary__divider"></div>
+
+            <div class="credit-summary__payments">
+                Внесено 7 платежей из 29
+            </div>
+
+            <div class="credit-summary__quick-actions">
+                <button class="credit-quick-action" type="button" id="002">
+                    <div class="credit-quick-action__icon" style="width: 50px; height: 50px;">
+                        <img src="svg\grafikPlatezei.svg" alt="">
+                    </div>
+                    <div class="credit-quick-action__text">
+                        График<br>платежей
+                    </div>
+                </button>
+
+                <button class="credit-quick-action" type="button">
+                    <div class="credit-quick-action__icon" style="width: 50px; height: 50px;">
+                        <img src="svg\PogasitDosrochno.svg" alt="">
+                    </div>
+                    <div class="credit-quick-action__text">
+                        Погасить<br>досрочно
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Блок ближайшего платежа -->
+        <section class="credit-payment-card" >
+            <div class="credit-payment-card__header">
+                <div class="credit-payment-card__title">Платёж 8 января</div>
+                <div class="credit-payment-card__subtitle">Спишем автоматически</div>
+            </div>
+
+            <div class="credit-payment-card__main">
+                <div class="credit-payment-card__amount">
+                    69 500,00 ₽
+                </div>
+                <div class="credit-payment-card__account">
+                    Счёт Альфа-карты ··8994
+                </div>
+            </div>
+
+            <div class="credit-payment-card__split">
+                <div class="credit-payment-card__split-text">
+                    Списываем автоматически
+                </div>
+                <div class="credit-payment-card__split-row">
+                    <div class="credit-payment-card__split-amount">
+                        44 500 ₽
+                    </div>
+                    <button class="credit-payment-card__info" type="button">
+                        <img src="svg\infoGREY.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="credit-payment-card__cta">
+                <button class="credit-payment-card__button" type="button">
+                    Пополнить на 44 500 ₽
+                </button>
+            </div>
+        </section>
+
+        <!-- Табы: действия / история / о кредите -->
+        
+
+
+            <div class="credit-tabs__content">
+            <div style="width: 343px; height: 32px; padding: 2px; background: #F0F4F5; border-radius: 8px; justify-content: flex-start; align-items: center; display: inline-flex; margin-left: 16px;" >
+  <div style="flex: 1 1 0; align-self: stretch; background: white; box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.04); border-radius: 8px; outline: 0.50px rgba(245, 245, 245, 0.92) solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div style="text-align: center; color: black; font-size: 13px; font-weight: 590; line-height: 18px; word-wrap: break-word">Действия</div>
+  </div>
+  <div style="flex: 1 1 0; align-self: stretch; border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div style="text-align: center; color: black; font-size: 13px; font-weight: 590; line-height: 18px; word-wrap: break-word">История</div>
+  </div>
+  <div style="width: 1px; height: 16px; background: #C7C7CC; border-radius: 0.50px"></div>
+  <div style="flex: 1 1 0; align-self: stretch; border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <div style="text-align: center; color: black; font-size: 13px; font-weight: 590; line-height: 18px; word-wrap: break-word">О кредите</div>
+  </div>
+</div>
+
+                <!-- Список действий по кредиту -->
+                <section class="credit-actions">
+                    <button class="credit-actions__item" type="button">
+                        <span class="credit-actions__icon">
+                            <img src="svg\KreditniyKanikuli.svg" alt="">
+                        </span>
+                        <span class="credit-actions__text">Кредитные каникулы</span>
+                    </button>
+
+                    <button class="credit-actions__item" type="button" id="003">
+                        <span class="credit-actions__icon">
+                            <img src="svg\GrafikPlatezeii.svg" alt="">
+                        </span>
+                        <span class="credit-actions__text">График платежей</span>
+                    </button>
+
+                    <button class="credit-actions__item" type="button">
+                        <span class="credit-actions__icon">
+                            <img src="svg\PogasitDOchrocnhoLITtTLE.svg" alt="">
+                        </span>
+                        <span class="credit-actions__text">Погасить досрочно</span>
+                    </button>
+
+                    <button class="credit-actions__item" type="button">
+                        <span class="credit-actions__icon">
+                            <img src="svg\SAVEyourMONEY.svg" alt="">
+                        </span>
+                        <span class="credit-actions__text">Застраховать</span>
+                    </button>
+                </section>
+
+                <!-- Документы -->
+                <section class="credit-documents">
+                    <div class="credit-documents__title" style="margin-left: 16px;">Документы</div>
+
+                    <button class="credit-documents__item" type="button">
+                        <span class="credit-documents__icon">
+                            <img src="svg\LASTdocument.svg" alt="">
+                        </span>
+                        <span class="credit-documents__text">Кредитный договор</span>
+                    </button>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Нижняя навигация -->
+    <nav class="bottom-nav">
+        <button class="bottom-nav__item bottom-nav__item--active" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\homeMAIN.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Главный</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\platezi.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Платежи</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\vigoda.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Выгода</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\istoriya.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">История</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\chat.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Чаты</span>
+        </button>
+    </nav>
+
+</div>
+</body>
+
+<script>
+    document.getElementById('002').addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+    document.getElementById('003').addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+    document.getElementById('004').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    })
+    document.getElementsByClassName('bottom-nav__item')[0].addEventListener('click', function() {
+        window.location.href = 'index.html';
+    })
+    document.getElementsByClassName('bottom-nav__item')[3].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+</script>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Альфа-календарь</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="alfa-app">
+
+    <!-- Верхний бейдж как на главном -->
+    <div class="top-banner">
+        <img src="svg\logo-1.svg" alt="МГУ • Альфа">
+    </div>
+
+    <!-- Хедер календаря -->
+    <header class="calendar-header">
+        <button class="calendar-header__back" type="button">
+            <img src="svg/backRED.svg" alt="Назад">
+        </button>
+
+        <div class="calendar-header__title-block">
+            <div class="calendar-header__title">Календарь</div>
+            <div class="calendar-header__year">2025</div>
+        </div>
+
+        <button class="calendar-header__info" type="button">
+            <img src="svg/Info.svg" alt="Информация">
+        </button>
+    </header>
+
+    <main class="calendar-main" style="padding-bottom: 43px;">
+
+        <!-- Строка: месяц + настройки -->
+        <section class="calendar-top">
+            <div class="calendar-month-row">
+                <button class="calendar-month" type="button">
+                    <span class="calendar-month__label">Январь</span>
+                    <span class="calendar-month__arrow">
+                        <img src="svg/downLINE.svg" alt="">
+                    </span>
+                </button>
+                <button class="calendar-month__settings" type="button">
+                    <img src="svg/SetYourDay.svg" alt="Настройки календаря">
+                </button>
+            </div>
+
+            <!-- Дни недели: пустые места под SVG -->
+            <div class="calendar-weekdays">
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-mon.svg" alt="Пн"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-tue.svg" alt="Вт"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-wed.svg" alt="Ср"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-thu.svg" alt="Чт"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-fri.svg" alt="Пт"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-sat.svg" alt="Сб"> -->
+                </div>
+                <div class="calendar-weekday">
+                    <!-- <img src="svg\wd-sun.svg" alt="Вс"> -->
+                </div>
+            </div>
+
+            <!-- Сетка календаря -->
+            <div class="calendar-days">
+                <div class="calendar-day">
+                    <div class="calendar-day__number"></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number"></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number"></div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">1</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">2</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">3</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">4</div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">5</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">6</div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">7</div>
+                    <div class="calendar-day__tags">
+                        <span class="calendar-day__tag calendar-day__tag--blue">
+                            <img src="svg/Day7-1.svg" alt="Авто">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">8</div>
+                    <div class="calendar-day__tags">
+                        <span class="calendar-day__tag calendar-day__tag--green">
+                            <img src="svg/DAY8-1.svg" alt="Кредит">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">9</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">10</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="calendar-day__number">11</div>
+                </div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">12</div>
+                    <div class="calendar-day__tags">
+                        <span class="calendar-day__tag calendar-day__tag--grey">
+                            <!-- <img src="svg\tag-chill.svg" alt="Чиллит"> -->
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-day"><div class="calendar-day__number">13</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">14</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">15</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">16</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">17</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">18</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">19</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">20</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">21</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">22</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">23</div></div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">24</div>
+                    <div class="calendar-day__tags">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-day"><div class="calendar-day__number">25</div></div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">26</div>
+                </div>
+
+                <div class="calendar-day"><div class="calendar-day__number">27</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">28</div></div>
+                <div class="calendar-day"><div class="calendar-day__number">29</div></div>
+
+                <div class="calendar-day">
+                    <div class="calendar-day__number">30</div>
+                    <div class="calendar-day__tags">
+                        <span class="calendar-day__tag calendar-day__tag--yellow">
+                            <img src="svg/DAY30-1.svg" alt="Чиллит">
+                        </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-day"><div class="calendar-day__number">31</div></div>
+            </div>
+        </section>
+        
+        <div class="calendar-divider" style="width: 359px; padding-left: 16px; padding-right: 16px; justify-content: space-between; align-items: center; display: inline-flex">
+  <div style="width: 10px; height: 6.5px;"></div>
+  <img src="svg\backToseraphim.svg" style="width: 10px; height: 6.5px; transform: rotate(0deg); cursor: pointer;">
+</div>
+
+<section class="white" style="border-radius: 32px 32px 0px 0px;">
+        <!-- БЛИЖАЙШИЕ СОБЫТИЯ -->
+<section class="events-block">
+    <h2 class="events-block__title">Ожидаемые события</h2>
+
+
+
+<!-- ДРУГИЕ СОБЫТИЯ -->
+
+
+    <!-- 1-я строка: Автокредит -->
+    <article class="other-item">
+        <div class="other-item__icon other-item__icon--blue">
+            <img src="svg/Kredit.svg" alt="Автокредит">
+        </div>
+
+        <div class="other-item__content">
+            <div class="other-item__row">
+                <div class="other-item__name">Автокредит</div>
+
+                <div class="other-item__amount">
+                    <span class="other-item__amount-main"> 44&nbsp;500</span>
+                    <span class="other-item__amount-decimal">,00</span>
+                    <span class="other-item__amount-currency">₽</span>
+                </div>
+            </div>
+
+            <div class="other-item__row other-item__row--sub">
+                <div class="other-item__subtitle">платеж по кредиту</div>
+                <div class="other-item__period">7 января</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 2-я строка: Кредит под залог -->
+    <article class="other-item">
+        <div class="other-item__icon other-item__icon--green">
+            <img src="platiMONEY.svg" alt="Кредит под залог">
+        </div>
+
+        <div class="other-item__content">
+            <div class="other-item__row">
+                <div class="other-item__name">Кредит под залог не...</div>
+
+                <div class="other-item__amount">
+                    <span class="other-item__amount-main">99&nbsp;900</span>
+                    <span class="other-item__amount-decimal">,00</span>
+                    <span class="other-item__amount-currency">₽</span>
+                </div>
+            </div>
+
+            <div class="other-item__row other-item__row--sub">
+                <div class="other-item__subtitle">платеж по кредиту</div>
+                <div class="other-item__period">9 января</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 3-я строка: Кредит наличными -->
+    <article class="other-item">
+        <div class="other-item__icon other-item__icon--blue">
+            <img src="svg/Kredit.svg" alt="Кредит наличными">
+        </div>
+
+        <div class="other-item__content">
+            <div class="other-item__row">
+                <div class="other-item__name">Кредит наличными</div>
+
+                <div class="other-item__amount">
+                    <span class="other-item__amount-main">139&nbsp;000</span>
+                    <span class="other-item__amount-decimal">,00</span>
+                    <span class="other-item__amount-currency">₽</span>
+                </div>
+            </div>
+
+            <div class="other-item__row other-item__row--sub">
+                <div class="other-item__subtitle">платеж по кредиту</div>
+                <div class="other-item__period">30 января</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Кнопка "Добавить новое событие" -->
+    <button class="events-add" type="button" style="margin-top: 0px;">
+        <span class="events-add__text">Добавить новое событие</span>
+        <span class="events-add__icon">
+            <!-- сюда плюсик / крестик -->
+            <img src="plus.svg" alt="+">
+        </span>
+    </button>
+</section>
+</section>
+
+    </main>
+
+    <!-- Нижняя навигация та же, активная – История (или как захочешь) -->
+    <nav class="bottom-nav">
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\homeGAY.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Главный</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\platezi.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Платежи</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\vigoda.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Выгода</span>
+        </button>
+
+        <button class="bottom-nav__item bottom-nav__item--active" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\clockALLO.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">История</span>
+        </button>
+
+        <button class="bottom-nav__item" type="button">
+            <span class="bottom-nav__icon">
+                <img src="svg\chat.svg" alt="">
+            </span>
+            <span class="bottom-nav__label">Чаты</span>
+        </button>
+    </nav>
+</div>
+</section>
+</body>
+<script>
+    document.getElementsByClassName('calendar-header__back')[0].addEventListener('click', function() {
+        window.location.href = 'index.html';
+    })
+    
+    document.getElementsByClassName('bottom-nav__item')[0].addEventListener('click', function() {
+        window.location.href = 'index.html';
+    })
+    document.getElementsByClassName('calendar-divider')[0].addEventListener('click', function() {
+        window.location.href = 'page2.html';
+    })
+</script>
+</html>
